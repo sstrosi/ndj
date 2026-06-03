@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     
-    #  【正确的位置】权限必须声明在 job 级别，与 runs-on 平级
+    # 🌟【核心修复】权限必须放在这里（Job 级别），绝对不能塞进 steps 里面
     permissions:
       contents: read
       packages: write
